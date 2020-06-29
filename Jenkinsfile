@@ -1,12 +1,19 @@
 pipeline {
-    agent {
-	dockerfile true
-    }
+    agent { docker { image 'rust:1.44' } }
     stages {
-	stage ('Build') {
+        stage ('clone') {
+            steps {
+                git 'https://github.com/rinz13r/calculator-app/'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'cargo build'
+            }
+        }
+	stage ('test') {
 	    steps {
-		sh 'cargo build --release'
+		sh 'cargo test'
 	    }
-	}
     }
 }
