@@ -1,9 +1,14 @@
 mod utils;
-use utils::utils::add;
+use utils::utils::{add, sub};
 
 #[test]
 fn test_add() {
     assert_eq!(12, add(8, 4));
+}
+
+#[test]
+fn test_sub () {
+    assert_eq! (1, sub (-3, -4));
 }
 
 use std::io::*;
