@@ -1,5 +1,5 @@
 mod utils;
-use utils::utils::{add, sub};
+use utils::utils::{add, sub, mul};
 
 #[test]
 fn test_add() {
@@ -28,4 +28,5 @@ use std::str::FromStr;
 
 fn main() {
     println! ("{}+{}={}", 1, 2, add (1, 2));
+    println! ("{}+{}={}", 19, 89, mul (19, 89));
 }

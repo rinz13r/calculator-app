@@ -11,3 +11,11 @@ where
 {
     u - v
 }
+
+
+pub fn mul<T>(u: T, v: T) -> T::Output
+where
+    T: std::ops::Mul,
+{
+    u * v
+}
