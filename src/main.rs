@@ -27,12 +27,5 @@ fn input (text: &'static str) -> String {
 use std::str::FromStr;
 
 fn main() {
-    let a = f64::from_str (&input ("Enter the first number: ")).unwrap_or_default ();
-    let b = f64::from_str (&input ("Enter the second number: ")).unwrap_or_default ();
-    let op = input ("Enter the operation: ");
-
-    match op.as_str () {
-        "+" => (println! ("{}", add (a, b))),
-        _ => (println! ("Unknown operation"))
-    }
+    println! ("{}+{}={}", 1, 2, add (1, 2));
 }
